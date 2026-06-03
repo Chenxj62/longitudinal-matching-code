@@ -1,0 +1,94 @@
+parameter[geometry] = Open            
+parameter[taylor_order] = 3
+
+parameter[p0c]                      = 9.9999986944003E8
+parameter[particle]                 = Electron
+parameter[absolute_time_tracking]    = F
+bmad_com[auto_bookkeeper] = F
+
+beginning[beta_a]   = 3
+beginning[beta_b]   = 9.437867493963
+beginning[alpha_b]  = 0.53694275161696
+
+
+!-------------------------------------------------------
+
+MA6: Marker
+DDBAT2: Drift, L = 0.1219114048233
+QDBAT1: Quadrupole, L = 0.45, K1 = -1.2905307135927
+DDBAT3: Drift, L = 0.67601082982233
+QDBAT2: Quadrupole, L = 0.45, K1 = 2.7534364203708
+DDBA3: Drift, L = 0.22765472542076
+BDBA1: Sbend, L = 0.91629785729702, G = 0.33333333333333
+DDBA2: Drift, L = 0.81993245429058
+QDBA1: Quadrupole, L = 0.4, K1 = -0.74955726426566
+DDBA1: Drift, L = 0.35152620095638
+S11: Sextupole, L = 0.2
+QDBA2: Quadrupole, L = 0.4, K1 = 2.493648910874
+DDBA4: Drift, L = 0.29464787439683
+S12: Sextupole, L = 0.2
+QDBA3: Quadrupole, L = 0.4, K1 = -1.2407059256752
+DDBA5: Drift, L = 0.73603350686021
+MAB1: Marker
+MAK1: Marker
+DD1: Drift, L = 0.36859864187788
+QMMAT4: Quadrupole, L = 0.25, K1 = -1.7893349685376, DS_STEP = 0.25
+DD2: Drift, L = 0.72662769522326
+QMMAT5: Quadrupole, L = 0.25, K1 = 2.4568232914538, DS_STEP = 0.025
+DD3: Drift, L = 0.62805928166405
+QMMAT7: Quadrupole, L = 0.25, K1 = 1.5818454005371, DS_STEP = 8.6206896551724E-3
+BARC11: Sbend, L = 0.5235987755983, G = 0.33333333333333
+DP7: Drift, L = 1.0866731321573
+QARC6: Quadrupole, L = 0.25, K1 = 4.2428375091001
+DP5: Drift, L = 0.24550947299025
+S08: Sextupole, L = 0.2, K2 = 138.1066529532
+QARC5: Quadrupole, L = 0.25, K1 = -4.1592232501898
+DP3: Drift, L = 1.7690133979502
+S01: Sextupole, L = 0.2, K2 = 13.047725312131
+DS: Drift, L = 0.2
+QARC4: Quadrupole, L = 0.25, K1 = 4.0137209575259
+DP1: Drift, L = 0.30369574831371
+MA5: Marker
+BARC1: Sbend, L = 0.5235987755983, G = 0.33333333333333
+MA2: Marker
+C7: Drift, L = 0.10376596564109
+QAMARC6: Quadrupole, L = 0.3, K1 = -4.8012598548632
+C5: Drift, L = 0.71391035148342
+S05: Sextupole, L = 0.2, K2 = 102.16975719874
+QAMARDD8: Quadrupole, L = 0.3, K1 = 1.3268792859373
+DAC6: Drift, L = 0.58829871444228
+SA2: Sextupole, L = 0.2, K2 = -16.883835154492
+QAMARDD9: Quadrupole, L = 0.3, K1 = 2.3763050806225
+DAC7: Drift, L = 0.50612747839264
+MA1: Marker
+MA4: Marker
+DARC5: Drift, L = 0.43220903658748
+SA3: Sextupole, L = 0.2, K2 = -14.245678657191
+QMAT5: Quadrupole, L = 0.25, K1 = -3.083606175198
+DARC6: Drift, L = 2.1226661961546
+S02: Sextupole, L = 0.2, K2 = 35.721527554826
+QMAT1: Quadrupole, L = 0.25, K1 = 4.3968370487931
+DARC8: Drift, L = 0.59477144568768
+QMAT6: Quadrupole, L = 0.25, K1 = -0.75348279363861
+DARC7: Drift, L = 0.068545509384432
+MA3: Marker
+
+!-------------------------------------------------------
+! Overlays, groups, rampers, and superimpose
+
+
+!-------------------------------------------------------
+! Lattice lines
+
+
+LAT: line = ( MA6, DDBAT2, QDBAT1, DDBAT3, QDBAT2, DDBA3, BDBA1, DDBA2, QDBA1, DDBA1, S11, DDBA1, QDBA2,
+   DDBA4, S12, DDBA4, QDBA3, DDBA5, BDBA1, MAB1, BDBA1, DDBA5, QDBA3, DDBA4, S12, DDBA4, QDBA2, DDBA1, S11,
+   DDBA1, QDBA1, DDBA2, BDBA1, DDBA3, QDBAT2, DDBAT3, QDBAT1, DDBAT2, DDBAT2, QDBAT1, DDBAT3, QDBAT2,
+   DDBA3, BDBA1, DDBA2, QDBA1, DDBA1, S11, DDBA1, QDBA2, DDBA4, S12, DDBA4, QDBA3, DDBA5, BDBA1, BDBA1,
+   DDBA5, QDBA3, DDBA4, S12, DDBA4, QDBA2, DDBA1, S11, DDBA1, QDBA1, DDBA2, BDBA1, DDBA3, QDBAT2, DDBAT3,
+   QDBAT1, DDBAT2, MAK1, DD1, QMMAT4, DD2, QMMAT5, DD3, QMMAT7, DD3, BARC11, DP7, QARC6, DP5, S08, DP5,
+   QARC5, DP3, S01, DS, QARC4, DP1, MA5, BARC1, MA2, C7, QAMARC6, C5, S05, DS, QAMARDD8, DAC6, SA2, DAC6,
+   QAMARDD9, DAC7, MA1, BARC11, MA4, DARC5, SA3, DARC5, QMAT5, DARC6, S02, DS, QMAT1, DARC8, QMAT6, DARC7,
+   MA3, BARC11)
+
+use, LAT
